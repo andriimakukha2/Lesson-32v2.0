@@ -31,7 +31,7 @@ p {
 }
 
 .search-container {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
@@ -67,6 +67,9 @@ p {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .movie:hover {
@@ -79,13 +82,18 @@ p {
     height: auto;
 }
 
-.movie h3 {
+.movie-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-info h3 {
     font-size: 18px;
     margin: 10px 0;
     color: #ffcc00;
 }
 
-.movie p {
+.movie-info p {
     color: #888;
     font-size: 14px;
     margin-bottom: 10px;
@@ -103,16 +111,50 @@ footer {
     }
 
     .movie {
-        width: 140px;
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    #searchInput {
+        font-size: 14px;
     }
 
     .movie {
         width: 120px;
+    }
+
+    .movie-info h3 {
+        font-size: 16px;
+    }
+
+    .movie-info p {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #searchInput {
+        font-size: 20px;
+    }
+
+    .movie {
+        width: 200px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .movie-info h3 {
+        font-size: 20px;
     }
 }

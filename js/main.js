@@ -36,8 +36,11 @@ function displayResults(movies) {
     resultsContainer.innerHTML = movies.map(movie => `
     <div class="movie">
       <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/placeholder.jpg'}" alt="${movie.Title}">
-      <h3>${movie.Title} (${movie.Year})</h3>
-      <p>Type: ${movie.Type}</p>
+      <div class="movie-info">
+        <h3>${movie.Title} (${movie.Year})</h3>
+        <p><strong>Type:</strong> ${movie.Type}</p>
+        <p><strong>IMDb ID:</strong> ${movie.imdbID}</p>
+      </div>
     </div>
   `).join('');
 }
