@@ -17,7 +17,7 @@ searchInput.addEventListener('input', () => {
 });
 
 function searchMovies(query) {
-    fetch(`http://www.omdbapi.com/?s=${query}&apikey=${apiKey}`)
+    fetch(`https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`)
         .then(response => response.json())
         .then(data => {
             if (data.Response === 'True') {
