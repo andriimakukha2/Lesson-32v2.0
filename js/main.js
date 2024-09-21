@@ -35,7 +35,7 @@ function searchMovies(query) {
 function displayResults(movies) {
     resultsContainer.innerHTML = movies.map(movie => `
     <div class="movie">
-      <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg'}" alt="${movie.Title}">
+      <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'img/placeholder.jpg'}" alt="${movie.Title}">
       <h3>${movie.Title} (${movie.Year})</h3>
       <p>Type: ${movie.Type}</p>
     </div>
